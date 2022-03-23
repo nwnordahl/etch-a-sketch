@@ -1,0 +1,29 @@
+/* Basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: calc(90vh + 1px);
+  height: calc(90vh + 1px);
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.test {
+  height: calc(90vh / 16);
+  width: calc(90vh / 16);
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
