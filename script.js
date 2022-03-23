@@ -30,16 +30,16 @@ divList.forEach((div) =>
 
 function removeColors(e) {
   divList.forEach((div) => {
-    div.style.backgroundColor = "white";
+    div.style.backgroundColor = "#f6ede8";
   });
 }
 
 function rainbow(e) {
   if (rainbowMode) {
-    e.target.textContent = "Rainbow Mode: Off";
+    e.target.textContent = "\u{1F308} Off";
     rainbowMode = false;
   } else {
-    e.target.textContent = "Rainbow Mode: On";
+    e.target.textContent = "\u{1F308} On";
     rainbowMode = true;
   }
 }
