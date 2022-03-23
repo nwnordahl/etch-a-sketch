@@ -22,6 +22,7 @@ body {
 }
 
 .test {
+  background-color: white;
   height: calc(90vh / 16);
   width: calc(90vh / 16);
   border-right: 1px solid black;
