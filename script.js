@@ -43,9 +43,13 @@ function removeColors(e) {
 function rainbow(e) {
   if (rainbowMode) {
     e.target.textContent = "\u{1F308} Off";
+    e.target.style.color = "#4a5096";
+    e.target.style.backgroundColor = "#abc4ff";
     rainbowMode = false;
   } else {
     e.target.textContent = "\u{1F308} On";
+    e.target.style.color = "#edf2fb";
+    e.target.style.backgroundColor = "#80a5ff";
     rainbowMode = true;
   }
 }
