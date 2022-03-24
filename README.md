@@ -2,7 +2,7 @@
 
 ## Todo
 
-- Make it possible to clear grid after changing grid size
+- Make it possible to clear grid after changing grid size [*]
 - Add eraser tool
 - Add color choice tool
 - Continuously drawing
