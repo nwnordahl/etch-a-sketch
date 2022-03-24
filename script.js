@@ -1,5 +1,12 @@
 const container = document.querySelector(".container");
 const buttonContainer = document.querySelector(".button-container");
+
+let color = "black";
+const colorPicker = document.querySelector("input[type=color]");
+colorPicker.addEventListener("input", (e) => {
+  color = e.target.value;
+});
+
 const body = document.querySelector("body");
 let n = 16;
 
@@ -40,7 +47,7 @@ divList.forEach((div) =>
         e.target.style.backgroundColor = randomColor();
         return;
       } else {
-        e.target.style.backgroundColor = "black";
+        e.target.style.backgroundColor = color;
       }
     }
   })
@@ -107,7 +114,7 @@ incrementButton.addEventListener("click", (e) => {
           e.target.style.backgroundColor = randomColor();
           return;
         } else {
-          e.target.style.backgroundColor = "black";
+          e.target.style.backgroundColor = color;
         }
       }
     })
@@ -153,7 +160,7 @@ decrementButton.addEventListener("click", (e) => {
           e.target.style.backgroundColor = randomColor();
           return;
         } else {
-          e.target.style.backgroundColor = "black";
+          e.target.style.backgroundColor = color;
         }
       }
     })
