@@ -7,10 +7,18 @@
 
 body {
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #edf2fb;
+}
+
+h1 {
+  position: absolute;
+  transform: rotate(-90deg) translateX(-122px) translateY(-180px);
+  color: #4a5096;
+  font-size: 50px;
 }
 
 .container {
