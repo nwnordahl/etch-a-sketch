@@ -1,4 +1,6 @@
 const container = document.querySelector(".container");
+const buttonContainer = document.querySelector(".button-container");
+const body = document.querySelector("body");
 let n = 16;
 
 for (let i = 0; i < n ** 2; i++) {
@@ -15,7 +17,7 @@ function randomColor() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-const divList = document.querySelectorAll(".square");
+let divList = document.querySelectorAll(".square");
 
 divList.forEach((div) =>
   div.addEventListener("click", (e) => {
@@ -54,7 +56,7 @@ function rainbow(e) {
   }
 }
 
-const resetButton = document.querySelector("#reset-button");
+let resetButton = document.querySelector("#reset-button");
 resetButton.addEventListener("click", removeColors);
 
 let rainbowMode = false;
@@ -81,7 +83,7 @@ incrementButton.addEventListener("click", (e) => {
     container.appendChild(div);
   }
 
-  const divList = document.querySelectorAll(".square");
+  divList = document.querySelectorAll(".square");
 
   divList.forEach((div) =>
     div.addEventListener("click", (e) => {
@@ -99,6 +101,14 @@ incrementButton.addEventListener("click", (e) => {
       }
     })
   );
+
+  resetButton.removeEventListener("click");
+  buttonContainer.removeChild(resetButton);
+  resetButton = document.createElement("button");
+  resetButton.id = "reset-button";
+  resetButton.textContent = "\u{1F504}";
+  buttonContainer.prepend(resetButton);
+  resetButton.addEventListener("click", removeColors);
 });
 
 decrementButton.addEventListener("click", (e) => {
@@ -118,7 +128,7 @@ decrementButton.addEventListener("click", (e) => {
     container.appendChild(div);
   }
 
-  const divList = document.querySelectorAll(".square");
+  divList = document.querySelectorAll(".square");
 
   divList.forEach((div) =>
     div.addEventListener("click", (e) => {
@@ -136,4 +146,12 @@ decrementButton.addEventListener("click", (e) => {
       }
     })
   );
+
+  resetButton.removeEventListener("click");
+  buttonContainer.removeChild(resetButton);
+  resetButton = document.createElement("button");
+  resetButton.id = "reset-button";
+  resetButton.textContent = "\u{1F504}";
+  buttonContainer.prepend(resetButton);
+  resetButton.addEventListener("click", removeColors);
 });
