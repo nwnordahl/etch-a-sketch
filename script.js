@@ -19,19 +19,29 @@ function randomColor() {
 
 let divList = document.querySelectorAll(".square");
 
+let mouseClick = false;
+container.addEventListener("click", (e) => {
+  if (mouseClick) {
+    mouseClick = false;
+  } else {
+    mouseClick = true;
+  }
+});
+
 divList.forEach((div) =>
-  div.addEventListener("click", (e) => {
-    console.log(e.target.style.backgroundColor);
-    if (
-      e.target.style.backgroundColor &&
-      e.target.style.backgroundColor !== "rgb(246, 237, 232)"
-    ) {
-      e.target.style.backgroundColor = "#f6ede8";
-    } else if (rainbowMode) {
-      e.target.style.backgroundColor = randomColor();
-      return;
-    } else {
-      e.target.style.backgroundColor = "black";
+  div.addEventListener("mouseover", (e) => {
+    if (mouseClick) {
+      if (
+        e.target.style.backgroundColor &&
+        e.target.style.backgroundColor !== "rgb(246, 237, 232)"
+      ) {
+        e.target.style.backgroundColor = "#f6ede8";
+      } else if (rainbowMode) {
+        e.target.style.backgroundColor = randomColor();
+        return;
+      } else {
+        e.target.style.backgroundColor = "black";
+      }
     }
   })
 );
@@ -86,18 +96,19 @@ incrementButton.addEventListener("click", (e) => {
   divList = document.querySelectorAll(".square");
 
   divList.forEach((div) =>
-    div.addEventListener("click", (e) => {
-      console.log(e.target.style.backgroundColor);
-      if (
-        e.target.style.backgroundColor &&
-        e.target.style.backgroundColor !== "rgb(246, 237, 232)"
-      ) {
-        e.target.style.backgroundColor = "#f6ede8";
-      } else if (rainbowMode) {
-        e.target.style.backgroundColor = randomColor();
-        return;
-      } else {
-        e.target.style.backgroundColor = "black";
+    div.addEventListener("mouseover", (e) => {
+      if (mouseClick) {
+        if (
+          e.target.style.backgroundColor &&
+          e.target.style.backgroundColor !== "rgb(246, 237, 232)"
+        ) {
+          e.target.style.backgroundColor = "#f6ede8";
+        } else if (rainbowMode) {
+          e.target.style.backgroundColor = randomColor();
+          return;
+        } else {
+          e.target.style.backgroundColor = "black";
+        }
       }
     })
   );
@@ -131,18 +142,19 @@ decrementButton.addEventListener("click", (e) => {
   divList = document.querySelectorAll(".square");
 
   divList.forEach((div) =>
-    div.addEventListener("click", (e) => {
-      console.log(e.target.style.backgroundColor);
-      if (
-        e.target.style.backgroundColor &&
-        e.target.style.backgroundColor !== "rgb(246, 237, 232)"
-      ) {
-        e.target.style.backgroundColor = "#f6ede8";
-      } else if (rainbowMode) {
-        e.target.style.backgroundColor = randomColor();
-        return;
-      } else {
-        e.target.style.backgroundColor = "black";
+    div.addEventListener("mouseover", (e) => {
+      if (mouseClick) {
+        if (
+          e.target.style.backgroundColor &&
+          e.target.style.backgroundColor !== "rgb(246, 237, 232)"
+        ) {
+          e.target.style.backgroundColor = "#f6ede8";
+        } else if (rainbowMode) {
+          e.target.style.backgroundColor = randomColor();
+          return;
+        } else {
+          e.target.style.backgroundColor = "black";
+        }
       }
     })
   );
