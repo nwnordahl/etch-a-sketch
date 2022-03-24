@@ -120,11 +120,10 @@ incrementButton.addEventListener("click", (e) => {
     })
   );
 
-  resetButton.removeEventListener("click");
   buttonContainer.removeChild(resetButton);
   resetButton = document.createElement("button");
   resetButton.id = "reset-button";
-  resetButton.textContent = "\u{1F504}";
+  resetButton.textContent = "\u21BA";
   buttonContainer.prepend(resetButton);
   resetButton.addEventListener("click", removeColors);
 });
@@ -166,11 +165,10 @@ decrementButton.addEventListener("click", (e) => {
     })
   );
 
-  resetButton.removeEventListener("click");
   buttonContainer.removeChild(resetButton);
   resetButton = document.createElement("button");
   resetButton.id = "reset-button";
-  resetButton.textContent = "\u{1F504}";
+  resetButton.textContent = "\u21BA";
   buttonContainer.prepend(resetButton);
   resetButton.addEventListener("click", removeColors);
 });
