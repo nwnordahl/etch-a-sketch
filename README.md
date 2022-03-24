@@ -2,10 +2,12 @@
 
 ## Todo
 
+- Add header label [*]
 - Make it possible to clear grid after changing grid size [*]
 - Add eraser tool
 - Add color choice tool [*]
 - Continuously drawing [*]
+- Refactor
 - Responsitivity
 - Add function to darken or lighten a tile
 - Save function
