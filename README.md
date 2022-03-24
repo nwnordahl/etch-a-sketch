@@ -4,7 +4,7 @@
 
 - Make it possible to clear grid after changing grid size [*]
 - Add eraser tool
-- Add color choice tool
+- Add color choice tool [*]
 - Continuously drawing [*]
 - Responsitivity
 - Add function to darken or lighten a tile
