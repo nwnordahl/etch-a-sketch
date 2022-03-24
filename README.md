@@ -4,6 +4,7 @@
 
 - Add header label [*]
 - Make it possible to clear grid after changing grid size [*]
+- Center grid [*]
 - Add eraser tool
 - Add color choice tool [*]
 - Continuously drawing [*]
