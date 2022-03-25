@@ -66,6 +66,10 @@ button {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
+input {
+  margin-bottom: 15px;
+}
+
 button#reset-button {
   font-size: 50px;
   width: 65px;

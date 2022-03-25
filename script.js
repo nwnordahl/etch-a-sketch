@@ -126,6 +126,8 @@ incrementButton.addEventListener("click", (e) => {
   resetButton.textContent = "\u21BA";
   buttonContainer.prepend(resetButton);
   resetButton.addEventListener("click", removeColors);
+
+  resetButton.click();
 });
 
 decrementButton.addEventListener("click", (e) => {
@@ -171,4 +173,32 @@ decrementButton.addEventListener("click", (e) => {
   resetButton.textContent = "\u21BA";
   buttonContainer.prepend(resetButton);
   resetButton.addEventListener("click", removeColors);
+
+  resetButton.click();
+});
+
+resetButton.click();
+const saveButton = document.querySelector("#save-button");
+saveButton.addEventListener("click", (e) => {
+  // Create canvas
+  const size = 50;
+  let canvas = document.createElement("canvas");
+  canvas.height = `${size * n}`;
+  canvas.width = `${size * n}`;
+  const ctx = canvas.getContext("2d");
+
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      if (e.target.style.backgroundColor) {
+        ctx.fillStyle = "#f6ede8";
+      } else {
+        ctx.fillStyle = divList[i * n + j].style.backgroundColor;
+      }
+      ctx.fillRect(size * j, size * i, size, size);
+    }
+  }
+
+  const dataUrl = canvas.toDataURL("image/png");
+  const newTab = window.open("about:blank", "image from canvas");
+  newTab.document.write("<img src='" + dataUrl + "' alt='from canvas'/>");
 });
