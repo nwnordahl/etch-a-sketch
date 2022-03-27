@@ -16,7 +16,7 @@ body {
 
 h1 {
   position: absolute;
-  transform: rotate(-90deg) translateX(-122px) translateY(-180px);
+  transform: rotate(-90deg) translateX(-102px) translateY(-165px);
   color: #4a5096;
   font-size: 50px;
 }
