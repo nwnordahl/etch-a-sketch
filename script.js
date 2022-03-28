@@ -40,14 +40,6 @@ function removeColors(e) {
   });
 }
 
-function randomColor() {
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
-
-  return `rgb(${r}, ${g}, ${b})`;
-}
-
 function randomRainbowColor() {
   rainbowIndex++;
   if (rainbowIndex > 6) {
@@ -141,7 +133,7 @@ decrementButton.addEventListener("click", (e) => {
     div.addEventListener("mouseover", (e) => {
       if (mouseClick) {
         if (rainbowMode) {
-          e.target.style.backgroundColor = randomColor();
+          e.target.style.backgroundColor = randomRainbowColor();
         } else {
           e.target.style.backgroundColor = color;
         }
@@ -220,7 +212,7 @@ incrementButton.addEventListener("click", (e) => {
     div.addEventListener("mouseover", (e) => {
       if (mouseClick) {
         if (rainbowMode) {
-          e.target.style.backgroundColor = randomColor();
+          e.target.style.backgroundColor = randomRainbowColor();
         } else {
           e.target.style.backgroundColor = color;
         }
