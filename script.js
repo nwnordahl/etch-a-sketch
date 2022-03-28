@@ -3,6 +3,16 @@ let n = 16;
 let mouseClick = false;
 let color = "black";
 let rainbowMode = false;
+let rainbowIndex = -1;
+const rainbowColors = [
+  "#FF0000",
+  "#FF7F00",
+  "#FFFF00",
+  "#00FF00",
+  "#0000FF",
+  "#4B0082",
+  "#9400D3",
+];
 
 // Query selectors
 const body = document.querySelector("body");
@@ -38,6 +48,15 @@ function randomColor() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
+function randomRainbowColor() {
+  rainbowIndex++;
+  if (rainbowIndex > 6) {
+    rainbowIndex = 0;
+  }
+
+  return rainbowColors[rainbowIndex];
+}
+
 function rainbow(e) {
   if (rainbowMode) {
     e.target.textContent = "\u{1F308} Off";
@@ -70,7 +89,7 @@ divList.forEach((div) =>
       ) {
         e.target.style.backgroundColor = "#f6ede8";
       } else if (rainbowMode) {
-        e.target.style.backgroundColor = randomColor();
+        e.target.style.backgroundColor = randomRainbowColor();
         return;
       } else {
         e.target.style.backgroundColor = color;
