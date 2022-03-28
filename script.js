@@ -81,6 +81,23 @@ container.addEventListener("click", (e) => {
 });
 
 divList.forEach((div) =>
+  div.addEventListener("click", (e) => {
+    if (!mouseClick) {
+      if (
+        e.target.style.backgroundColor &&
+        e.target.style.backgroundColor !== "rgb(246, 237, 232)"
+      ) {
+        e.target.style.backgroundColor = "#f6ede8";
+      } else if (rainbowMode) {
+        e.target.style.backgroundColor = randomRainbowColor();
+      } else {
+        e.target.style.backgroundColor = color;
+      }
+    }
+  })
+);
+
+divList.forEach((div) =>
   div.addEventListener("mouseover", (e) => {
     if (mouseClick) {
       if (
@@ -118,6 +135,23 @@ decrementButton.addEventListener("click", (e) => {
   }
 
   divList = document.querySelectorAll(".square");
+
+  divList.forEach((div) =>
+    div.addEventListener("click", (e) => {
+      if (!mouseClick) {
+        if (
+          e.target.style.backgroundColor &&
+          e.target.style.backgroundColor !== "rgb(246, 237, 232)"
+        ) {
+          e.target.style.backgroundColor = "#f6ede8";
+        } else if (rainbowMode) {
+          e.target.style.backgroundColor = randomRainbowColor();
+        } else {
+          e.target.style.backgroundColor = color;
+        }
+      }
+    })
+  );
 
   divList.forEach((div) =>
     div.addEventListener("mouseover", (e) => {
@@ -191,6 +225,23 @@ incrementButton.addEventListener("click", (e) => {
   }
 
   divList = document.querySelectorAll(".square");
+
+  divList.forEach((div) =>
+    div.addEventListener("click", (e) => {
+      if (!mouseClick) {
+        if (
+          e.target.style.backgroundColor &&
+          e.target.style.backgroundColor !== "rgb(246, 237, 232)"
+        ) {
+          e.target.style.backgroundColor = "#f6ede8";
+        } else if (rainbowMode) {
+          e.target.style.backgroundColor = randomRainbowColor();
+        } else {
+          e.target.style.backgroundColor = color;
+        }
+      }
+    })
+  );
 
   divList.forEach((div) =>
     div.addEventListener("mouseover", (e) => {
