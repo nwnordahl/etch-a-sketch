@@ -5,6 +5,7 @@
 - Add header label [*]
 - Make it possible to clear grid after changing grid size [*]
 - Center grid [*]
+- Fix a bug where color picker does update value when using the eyedropper
 - Add eraser tool
 - Add color choice tool [*]
 - Continuously drawing [*]
