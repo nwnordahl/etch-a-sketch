@@ -75,7 +75,9 @@ container.addEventListener("click", (e) => {
 divList.forEach((div) =>
   div.addEventListener("click", (e) => {
     if (!mouseClick) {
-      if (rainbowMode) {
+      if (e.target.style.backgroundColor !== "rgb(246, 237, 232)") {
+        return;
+      } else if (rainbowMode) {
         e.target.style.backgroundColor = randomRainbowColor();
       } else {
         e.target.style.backgroundColor = color;
@@ -87,7 +89,9 @@ divList.forEach((div) =>
 divList.forEach((div) =>
   div.addEventListener("mouseover", (e) => {
     if (mouseClick) {
-      if (rainbowMode) {
+      if (e.target.style.backgroundColor !== "rgb(246, 237, 232)") {
+        return;
+      } else if (rainbowMode) {
         e.target.style.backgroundColor = randomRainbowColor();
       } else {
         e.target.style.backgroundColor = color;
@@ -120,7 +124,9 @@ decrementButton.addEventListener("click", (e) => {
   divList.forEach((div) =>
     div.addEventListener("click", (e) => {
       if (!mouseClick) {
-        if (rainbowMode) {
+        if (e.target.style.backgroundColor !== "rgb(246, 237, 232)") {
+          return;
+        } else if (rainbowMode) {
           e.target.style.backgroundColor = randomRainbowColor();
         } else {
           e.target.style.backgroundColor = color;
@@ -132,7 +138,9 @@ decrementButton.addEventListener("click", (e) => {
   divList.forEach((div) =>
     div.addEventListener("mouseover", (e) => {
       if (mouseClick) {
-        if (rainbowMode) {
+        if (e.target.style.backgroundColor !== "rgb(246, 237, 232)") {
+          return;
+        } else if (rainbowMode) {
           e.target.style.backgroundColor = randomRainbowColor();
         } else {
           e.target.style.backgroundColor = color;
@@ -199,7 +207,9 @@ incrementButton.addEventListener("click", (e) => {
   divList.forEach((div) =>
     div.addEventListener("click", (e) => {
       if (!mouseClick) {
-        if (rainbowMode) {
+        if (e.target.style.backgroundColor !== "rgb(246, 237, 232)") {
+          return;
+        } else if (rainbowMode) {
           e.target.style.backgroundColor = randomRainbowColor();
         } else {
           e.target.style.backgroundColor = color;
@@ -211,7 +221,9 @@ incrementButton.addEventListener("click", (e) => {
   divList.forEach((div) =>
     div.addEventListener("mouseover", (e) => {
       if (mouseClick) {
-        if (rainbowMode) {
+        if (e.target.style.backgroundColor !== "rgb(246, 237, 232)") {
+          return;
+        } else if (rainbowMode) {
           e.target.style.backgroundColor = randomRainbowColor();
         } else {
           e.target.style.backgroundColor = color;
