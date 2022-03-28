@@ -17,4 +17,5 @@
 - Make it so that drawing carry over when changing tile amount
 - Make it possible to change grid styling
 - Make it possible to change color theme
+- Add functionality to undo changes
 - Make it possible to convert the sketch to an image file [*]
