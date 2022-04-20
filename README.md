@@ -1,4 +1,4 @@
-# Etch-a-Sketch
+# Pixel Sketch
 
 ## Todo
 
