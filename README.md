@@ -1,5 +1,9 @@
 # Pixel Sketch
 
+Drawing software built with HTML, CSS and vanilla JS
+
+<img src="./img/screenshot.png" />
+
 ## Todo
 
 - Add header label [*]
